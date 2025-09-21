@@ -1,13 +1,13 @@
 "use strict";
 
-function calculateVolumeAndArea(edge) {
-    if (typeof edge !== 'number' || !Number.isInteger(edge) || edge <= 0){
+function calculateVolumeAndArea(cubeEdge) {
+    if (typeof cubeEdge !== 'number' || !Number.isInteger(cubeEdge) || cubeEdge <= 0){
         return `При вычислении произошла ошибка`;
     }
-    let volume = edge * edge * edge;
-    let area = edge * edge;
+    let volume = cubeEdge * cubeEdge * cubeEdge;
+    let area = 6 * (cubeEdge * cubeEdge);
     return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
 }
 
-edge = +prompt("Please enter the number of your cube`s edge: ", '');
-calculateVolumeAndArea(edge);
+let cubeEdge = +prompt("Please enter the number of your cube`s edge: ", '');
+alert(calculateVolumeAndArea(cubeEdge));
