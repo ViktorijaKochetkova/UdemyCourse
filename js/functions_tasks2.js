@@ -1,13 +1,15 @@
 "use strict";
 
+//Task 1
+
 function calculateVolumeAndArea(cubeEdge) {
     if (typeof cubeEdge !== 'number' || !Number.isInteger(cubeEdge) || cubeEdge <= 0){
-        return `При вычислении произошла ошибка`;
+        return `An error occurred while calculating`;
     }
     let volume = cubeEdge * cubeEdge * cubeEdge;
     let area = 6 * (cubeEdge * cubeEdge);
-    return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+    return `Volume of a cube: ${volume}, total surface area: ${area}`;
 }
 
-let cubeEdge = +prompt("Please enter the number of your cube`s edge: ", '');
+let cubeEdge = +prompt("Please enter the size of the cube edge", '');
 alert(calculateVolumeAndArea(cubeEdge));
